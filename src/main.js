@@ -34,6 +34,7 @@ function animateText(sentence, speed = 10) {
 }
 animateText("ابدأ رحلتك في تعلم البرمجة الآن", 150);
 const faders = document.querySelectorAll('.fade-up');
+const boxes = document.querySelectorAll('.courses .box');
 
     const appearOnScroll = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -46,6 +47,9 @@ const faders = document.querySelectorAll('.fade-up');
     });
 
     faders.forEach(fade => {
+      appearOnScroll.observe(fade);
+    });
+    boxes.forEach(fade => {
       appearOnScroll.observe(fade);
     });
 
@@ -61,7 +65,7 @@ const faders = document.querySelectorAll('.fade-up');
 البريد: ${email}
 رقم الهاتف: ${phone}
 الرسالة: ${message}`;
-    const phoneNumber = "01023966702"
+    const phoneNumber = "+201023966702"
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
 
     window.open(url, '_blank');

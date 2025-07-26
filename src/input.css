@@ -117,9 +117,13 @@ body{
     border: 1px solid #ddd  ;
     border-radius: 6px;
     padding: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
-.courses .box img{
-    
+.courses .box.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 .courses .box h3{
     border: 1px solid rgb(39, 9, 236);
@@ -148,10 +152,6 @@ body{
         overflow: hidden;
     }
 
-.courses .box img {
-    width: 100%;
-    height: 100%;
-}
 }
 .fade-up {
     opacity: 0;

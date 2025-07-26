@@ -89,17 +89,22 @@ body{
     }
 }
 .trans-toggle {
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    right:0;
+    z-index: 1000;
 }
 
 .trans-toggle-active {
-    height: 100%;
-    width: 100%;
+   
+   opacity: 1;
+    
 }
 
 .trans-toggle-hide {
-    height: 0;
-    width: 0;
+    
+    opacity: 0;
 }
 .hero{
     height: calc(100vh - 48px);
@@ -107,16 +112,19 @@ body{
 .hero h2{
     min-height: 70px;
     text-align: end;
-    font-family: monospace;
+    
 }
 .hero p{
-    color: oklch(0.88 0.18 89.06);
+    color: white;
+    background-color: rgba(251, 8, 8);
+    border-radius: 5px;
 }
 .courses .box{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd  ;
     border-radius: 6px;
     padding: 10px;
+    min-height: 230px;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
@@ -124,6 +132,21 @@ body{
 .courses .box.show{
     opacity: 1;
     transform: translateY(0);
+}
+.courses .box .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 6px;    
+}
+.courses .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.courses .box .image img:hover{
+    transform: scale(1.1);
 }
 .courses .box h3{
     border: 1px solid rgb(39, 9, 236);

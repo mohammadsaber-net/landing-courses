@@ -1,3 +1,4 @@
+// main.js
 
 let menu_toggle=document.querySelector('.menu-toggle');
 let trans_toggle=document.querySelector('.trans-toggle');
@@ -69,4 +70,18 @@ const boxes = document.querySelectorAll('.courses .box');
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
 
     window.open(url, '_blank');
+  });
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
   });

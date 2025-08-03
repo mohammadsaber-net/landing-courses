@@ -248,6 +248,9 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
+  .me-1 {
+    margin-inline-end: calc(var(--spacing) * 1);
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }

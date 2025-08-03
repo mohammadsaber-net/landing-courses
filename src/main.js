@@ -71,7 +71,8 @@ const boxes = document.querySelectorAll('.courses .box');
 
     window.open(url, '_blank');
   });
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Sw
+  iper('.swiper', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
